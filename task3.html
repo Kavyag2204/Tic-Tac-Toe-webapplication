@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic-Tac-Toe — PvP & PvC</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap" role="application" aria-label="Tic Tac Toe game">
+    <header>
+      <h1>Tic-Tac-Toe</h1>
+      <div class="controls">
+        <label class="small" for="mode">Mode</label>
+        <select id="mode">
+          <option value="pvp">Player vs Player</option>
+          <option value="pvc">Player vs Computer</option>
+        </select>
+        <label class="small" for="first">You play as</label>
+        <select id="first">
+          <option value="X">X (goes first)</option>
+          <option value="O">O</option>
+        </select>
+        <button id="reset">New Game</button>
+      </div>
+    </header>
+
+    <section class="board" id="board"></section>
+
+    <aside class="panel">
+      <div class="stat"><div class="small">Turn</div><div class="turn" id="turn">—</div></div>
+      <div class="stat"><div class="small">Status</div><div id="status" class="small">Ready</div></div>
+      <div class="stat"><div class="small">Mode</div><div id="modeText" class="small">Player vs Player</div></div>
+
+      <div class="score">
+        <div class="item"><div class="small">X</div><div id="scoreX">0</div></div>
+        <div class="item"><div class="small">O</div><div id="scoreO">0</div></div>
+        <div class="item"><div class="small">Draws</div><div id="scoreD">0</div></div>
+      </div>
+
+      <div class="winner" id="winnerBox" style="display:none">
+        <div id="winnerText"></div>
+        <div id="subText" class="small"></div>
+      </div>
+
+      <div class="buttons">
+        <button id="undo">Undo</button>
+        <button id="hint">Hint</button>
+        <button id="resetAll">Reset Scores</button>
+      </div>
+    </aside>
+
+    <footer>Unbeatable AI • Responsive Neon UI</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
